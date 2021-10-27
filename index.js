@@ -20,7 +20,7 @@ function rotasFinais(rotas) {
             saida: 'Centro-Oeste'
         },
         {
-            entrada: 'Centro-oeste',
+            entrada: 'Centro-Oeste',
             saida: 'Norte'
         },
         {
@@ -44,10 +44,12 @@ function rotasFinais(rotas) {
             }
         }
 
-        rotas.push(rotasPreEstabelecidas[index]); 
+        rotas.push(rotasPreEstabelecidas[index]);
     });
-    
-    console.log(rotas);
+
+    rotas.forEach((element) => {
+        console.log(`${element.entrada} --> ${element.saida}`)
+    });
 }
 
 rotasFinais(rotasIniciais);
