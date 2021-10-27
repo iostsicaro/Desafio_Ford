@@ -27,7 +27,7 @@ function rotasFinais(rotas) {
             entrada: 'Norte',
             saida: 'Sudeste'
         }
-    ]
+    ];
 
     rotas.forEach((element, index) => {
         if(rotasPreEstabelecidas[index].entrada == 'Sudeste') {
@@ -48,7 +48,7 @@ function rotasFinais(rotas) {
     });
 
     rotas.forEach((element) => {
-        console.log(`${element.entrada} --> ${element.saida}`)
+        console.log(`${element.entrada} ----> ${element.saida}`);
     });
 }
 
