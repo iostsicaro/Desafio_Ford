@@ -1,46 +1,46 @@
 let rotasIniciais = [
     {
-        entrada: 'Norte',
-        saida: 'Nordeste'
+        saida: 'Norte',
+        entrada: 'Nordeste'
     },
     {
-        entrada: 'Sudeste',
-        saida: 'Centro-Oeste'
+        saida: 'Sudeste',
+        entrada: 'Centro-Oeste'
     },
     {
-        entrada: 'Sudeste',
-        saida: 'Sul'
+        saida: 'Sudeste',
+        entrada: 'Sul'
     }
 ];
 
 function rotasFinais(rotas) {
     let rotasPreEstabelecidas = [
         {
-            entrada: 'Sul',
-            saida: 'Centro-Oeste'
+            saida: 'Sul',
+            entrada: 'Centro-Oeste'
         },
         {
-            entrada: 'Centro-Oeste',
-            saida: 'Norte'
+            saida: 'Centro-Oeste',
+            entrada: 'Norte'
         },
         {
-            entrada: 'Norte',
-            saida: 'Sudeste'
+            saida: 'Norte',
+            entrada: 'Sudeste'
         }
     ];
 
     rotas.forEach((element, index) => {
-        if(rotasPreEstabelecidas[index].entrada == 'Sudeste') {
-            console.log('Região Sudeste já possui mais de uma entrada.');
+        if(rotasPreEstabelecidas[index].saida == 'Sudeste') {
+            console.log('Região Sudeste já possui mais de uma saída.');
         }
 
         let contadorSul = 0
 
-        if(rotasPreEstabelecidas[index] == 'Sul') {
+        if(rotasPreEstabelecidas[index].saida == 'Sul') {
             contadorSul++;
 
             if(contadorSul == 2) {
-                console.log('Região Sul já possui mais de uma entrada.');
+                console.log('Região Sul já possui mais de uma saída.');
             }
         }
 
@@ -48,7 +48,7 @@ function rotasFinais(rotas) {
     });
 
     rotas.forEach((element) => {
-        console.log(`${element.entrada} ----> ${element.saida}`);
+        console.log(`${element.saida} ----> ${element.entrada}`);
     });
 }
 
