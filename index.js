@@ -49,6 +49,7 @@ function rotasFinais(rotas) {
 
     rotas.forEach((element) => {
         console.log(`${element.saida} ----> ${element.entrada}`);
+        console.log('-----------------------------------------');
     });
 }
 
